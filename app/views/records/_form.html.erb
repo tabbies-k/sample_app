@@ -1,0 +1,37 @@
+<%= form_for(record) do |f| %>
+  <% if record.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(record.errors.count, "error") %> prohibited this record from being saved:</h2>
+
+      <ul>
+      <% record.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ユーザ名 %>
+    <%= f.text_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :候補者 %>
+    <%= f.text_field :candidate %>
+  </div>
+
+  <div class="field">
+    <%= f.label :企業名 %>
+    <%= f.text_field :client %>
+  </div>
+
+  <div class="field">
+    <%= f.label :進捗 %>
+    <%= f.text_field :state %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>ユーザID:</strong>
+  <%= @user.id %>
+</p>
+
+<p>
+  <strong>氏名:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>支社:</strong>
+  <%= @user.branch %>
+</p>
+
+<%= link_to '編集する', edit_user_path(@user) %> |
+<%= link_to '戻る', users_path %>
+
+<div>
+  <p>商談一覧</p>
+</div>
