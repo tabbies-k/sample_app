@@ -20,5 +20,6 @@
   <%= @record.state %>
 </p>
 
-<%= link_to 'Edit', edit_record_path(@record) %> |
-<%= link_to 'Back', records_path %>
+<%= link_to '編集する', edit_record_path(@record) %> |
+<%= link_to '削除する', record_path, method: :delete, data: { confirm: '削除しますか?' } %> |
+<%= link_to '戻る', records_path %>

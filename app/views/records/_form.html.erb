@@ -28,7 +28,7 @@
 
   <div class="field">
     <%= f.label :進捗 %>
-    <%= f.text_field :state %>
+    <%= f.select :state, [["first_ap","first_ap"],["matching","matching"],["closing","closing"],["成約","成約"]] %>
   </div>
 
   <div class="actions">
